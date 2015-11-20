@@ -1,0 +1,13 @@
+<ion-view title="Business Places">
+    <ion-content padding="'true'" class="has-header">
+        <ion-list></ion-list>
+        <ion-list></ion-list>
+        <form class="list">
+            <ion-item menu-close=""  ng-click="showConfirm(place)" ng-repeat="place in places track by $index">{{place.name}}</ion-item>
+            <div class="spacer" style="width: 300px; height: 261px;"></div>
+        </form>
+        <div>
+            <p>Select the Google Business place you represent</p>
+        </div>
+    </ion-content>
+</ion-view>
