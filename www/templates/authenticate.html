@@ -1,9 +1,10 @@
-<ion-view title="Authenticate">
+<ion-view title="Authenticate" align-title="center" style="background-color: orange;">
     <ion-content padding="'true'" class="has-header">
-        <h1>ATM Surfing</h1>
+        <h1 align="center" style="color: white;">ATM Surfing</h1>
         <div class="spacer" style="width: 300px; height: 75px;"></div>
-        <a menu-close="" href="#/businessplaces" class="button button-stable button-block button-large icon-left ion-social-google">Google Auth</a>
+        <a menu-close="" ng-click='login("google")' class="button button-stable button-block button-large icon-left ion-social-google">Google Auth</a>
         <a menu-close="" href="#/businessplaces" class="button button-stable button-block button-large icon-left ion-social-facebook">Facebook Auth</a>
+        <div class="spacer" style="height: 20px;"></div>
         <img src="img/X92RMhVLQnqNIlRlI74H_atm_surfing.png" width="100%" height="auto" style="width: 100%; height: auto;">
     </ion-content>
 </ion-view>

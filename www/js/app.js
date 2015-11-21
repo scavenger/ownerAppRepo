@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'firebase', 'ngGPlaces', 'angularGeoFire'])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'firebase', 'ui.router', 'ngGPlaces' /*, 'angularGeoFire' */])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -24,6 +24,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
 .config(function(ngGPlacesAPIProvider){
   ngGPlacesAPIProvider.setDefaults({
     placeDetailsKeys: [ 'id', 'geometry', 'reference', 'website', 'name'],
-    types: ['accounting', 'atm', 'bakery', 'bank', 'bar', 'cafe', 'gas_station', 'home_goods_store', 'insurance_agency', 'library', 'liquor_store', 'restaurant', 'shopping_mall']
+    types: ['accounting', 'bakery', 'bank', 'bar', 'cafe', 'gas_station', 'home_goods_store', 'insurance_agency', 'library', 'liquor_store', 'restaurant', 'shopping_mall']
   });
 });

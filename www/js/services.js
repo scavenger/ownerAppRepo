@@ -17,6 +17,11 @@ angular.module('app.services', [])
 	}
 }])
 
+.factory('Auth', function($firebaseAuth, FirebaseRef) {
+    var usersRef = FirebaseRef.get();
+    return $firebaseAuth(usersRef);
+  })
+
 .factory('BusinessPlaces', ['ngGPlacesAPI', function(ngGPlacesAPI){
 	return {
 		getPlaces: function(lat, lon){

@@ -17,13 +17,13 @@ angular.module('app.routes', [])
     })
         
     .state('businessPlaces', {
-      url: '/businessplaces',
+      url: '/businessplaces/:id/:name',
       templateUrl: 'templates/businessPlaces.html',
       controller: 'businessPlacesCtrl'
     })
         
     .state('status', {
-      url: '/status',
+      url: '/status/:id/:active/:maxamount',
       templateUrl: 'templates/status.html',
       controller: 'statusCtrl'
     })

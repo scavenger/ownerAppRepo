@@ -1,19 +1,24 @@
-<ion-view title="Status">
+<ion-view title="Status" align-title="center" style="background-color: orange;">
     <ion-content padding="'true'" class="has-header">
+
         <form class="list">
-            <ion-toggle toggle-class="toggle-positive">Active</ion-toggle>
+            <div class="spacer" style="height: 20px;"></div>
             <div>
-                <p>Choose if you're
-                    <strong>available</strong>to offer money</p>
+                <h4>Choose if you're <strong>available</strong> to change money</h4>
+            </div>            
+            <div class="spacer" style="height: 20px;"></div>                
+            <ion-toggle ng-model="$parent.active" toggle-class="toggle-positive">Active</ion-toggle>
+            <div class="spacer" style="height: 20px;"></div>
+            <div>
+                <h4>Maximum amount of money one can retrieve <br /> ( <strong> {{$parent.maxAmount}} EUR </strong> )</h4>
             </div>
+            <div class="spacer" style="height: 20px;"></div>            
             <ion-item class="range range-positive">Amount
-                <input type="range" value="50" min="0" max="200">
+                <input type="range" ng-model="$parent.$parent.maxAmount" min="0" max="300">
             </ion-item>
         </form>
-        <div>
-            <p>Maximum amount of money one can retrieve</p>
-        </div>
-        <div class="spacer" style="height: 100px;"></div>
-        <button class="button button-light button-block ">Update</button>
+
+        <div class="spacer" style="height: 80px;"></div>
+        <button class="button button-light button-block" style="background-color: #CE930E;" ng-click="onSave()">Update</button>
     </ion-content>
 </ion-view>
